@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rawr.package.name">
    <application
-        android:label="arrr"
+        android:label="rawr"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

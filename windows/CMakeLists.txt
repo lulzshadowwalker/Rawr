@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(arrr LANGUAGES CXX)
+project(rawr LANGUAGES CXX)
 
-set(BINARY_NAME "arrr")
+set(BINARY_NAME "rawr")
 
 cmake_policy(SET CMP0063 NEW)
 

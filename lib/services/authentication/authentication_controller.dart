@@ -33,9 +33,9 @@ class AuthenticationController extends GetxController {
     try {
       await _account.create(
         userId: 'unique()',
-        email: _userData.email!,
-        password: _userData.password!,
-        name: _userData.username,
+        email: 'alsdjn@lkndsf.alslkdn',
+        password: 'laksndlnkaslndla',
+        name: 'alskdnalsdnlaskd',
       );
     } catch (e) {
       LulzUtils.handleError(

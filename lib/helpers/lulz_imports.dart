@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:rawr/controllers/bindings/client_binding.dart';
+import 'package:rawr/controllers/client/bindings/client_binding.dart';
 import 'package:rawr/services/authentication/authentication_controller.dart';
 import 'package:rawr/views/landing/d_landing.dart';
 import 'dart:developer' as dev;
