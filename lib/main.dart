@@ -1,4 +1,10 @@
-import 'package:arrr/helpers/lulz_imports.dart';
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() => runApp(const Arrr());
+import 'helpers/lulz_imports.dart';
+
+void main() async {
+  await GetStorage.init();
+
+  runApp(const Rawr());
+}

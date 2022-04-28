@@ -1,5 +1,5 @@
-name: arrr
-description: Basic Flutter Template built GetX as a state management solution in mind..
+name: rawr
+description: Flutter project that implements the idea of a group card that uses [appwrite](https://appwrite.io/) as a backend service and [GetX]((https://pub.dev/packages/get)) as a state management solution.
 
 
 version: 1.0.0+1
@@ -21,6 +21,8 @@ dependencies:
 
   # TODO: Change package name and remove this package 
   change_app_package_name: ^1.0.0
+  appwrite: ^4.0.2
+  get_storage: ^2.0.3
 
 
 dev_dependencies:

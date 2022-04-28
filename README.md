@@ -1,56 +1,25 @@
-# arrr
+# RAWR
 
-Basic Flutter Template built with `GetX` as a state management solution in mind.
+Flutter project that implements the idea of a group card that uses [appwrite](https://appwrite.io/) as a backend service and [GetX]((https://pub.dev/packages/get)) as a state management solution. 
+
+
 
 ## TABLE OF CONTENTS
 
-- [What you get](#what-you-get)
+[platforms](#platforms)
 
-- [Installation](#installation) 
+[what I learned](#what-i-learned)
 
-- [Notes](#notes)
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
-- [Suggested git commit conventions](#suggested-git-commit-conventions)
+## PLATFORMS
 
-## WHAT YOU GET
+- Windows
 
-- Basic Material-based app setup
+- Linux 
 
-- preset folder structure
-  
-  > ![arr folder structure](https://user-images.githubusercontent.com/92385434/165495770-19799994-dc32-4538-8274-015afeaaed7d.png)
+- Web ( limited to some features only such as adding new submissions )
 
-## Installation
 
-- ```git
-  git clone git@github.com:lulzshadowwalker/arrr.git
-  ```
 
-- ```dart
-  flutter pub get
-  ```
-
-- ```dart
-  /// change package name using ( https://pub.dev/packages/change_app_package_name )
-  flutter pub run change_app_package_name:main com.new.package.name
-  ```
-
-## NOTES
-
-- Beware of pre-included linked files ( part, part of ) if you were to declare private fields.
-
-- It uses the default text styles and expects the mockup to be based on the standard Flutter text styles.
-
-## SUGGESTED GIT COMMIT CONVENTION
-
-- 🚀 FEAT
-
-- 🧼 REFACTOR
-
-- 🐞 BUG
-
-- 👨🏻‍🏭 WIP
-
-- 👶🏻 INIT
+## WHAT I LEARNED
