@@ -9,7 +9,7 @@ class LulzUtils {
   /// [error] is outputted to the console
   static void handleError(
       {required String toastMessage,
-      required String error,
+      required Object error,
       required String className}) {
     /// show toast
     /// TODO: add toast

@@ -23,7 +23,7 @@ class _DSplashState extends State<DSplash> {
         /// Check [isFirstLaunch] and show either Login(Login/Home technically) or landing page
         isFirstLaunch == null
             ? Get.off(() => const DLanding())
-            : Get.off(() => const DHome(), binding: ClientBinding());
+            : Get.off(() => const DSignIn(), binding: ClientBinding());
       },
     );
   }

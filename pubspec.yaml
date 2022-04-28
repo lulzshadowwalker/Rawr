@@ -18,11 +18,13 @@ dependencies:
 
   # GetX
   get: ^4.6.1
+  get_storage: ^2.0.3
 
   # TODO: Change package name and remove this package 
   change_app_package_name: ^1.0.0
+
+  # backend service: auth / database / storage / ...etc
   appwrite: ^4.0.2
-  get_storage: ^2.0.3
 
 
 dev_dependencies:
@@ -37,5 +39,8 @@ flutter:
 
   assets:
     - assets/images/
+    
+    # local 3D objects 
+    - assets/objects/
 
   

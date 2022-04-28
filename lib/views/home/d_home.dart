@@ -7,9 +7,10 @@ class DHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: ElevatedButton(
-              onPressed: Get.find<AuthenticationController>().signUpWithEmailAndPassword,
-              child: const Icon(Icons.add))),
+        child: ElevatedButton(
+            onPressed: Get.find<AuthController>().signOut,
+            child: const Text('sign out')),
+      ),
     );
   }
 }
