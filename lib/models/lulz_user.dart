@@ -1,4 +1,4 @@
-part of '../../helpers/lulz_imports.dart';
+part of '../helpers/lulz_imports.dart';
 
 class LulzUser {
   String? email;
@@ -16,7 +16,7 @@ class LulzUser {
 
   LulzUser.fromRemoteUser(RemoteUser remoteUser)
 
-      /// Special model because [appwrite] would not a document if the data
+      /// Special model because [appwrite] would not add document if the data
       ///  structure is not compatible
       : email = remoteUser.email,
         username = remoteUser.username,

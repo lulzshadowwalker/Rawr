@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:rawr/helpers/lulz_imports.dart';
 
-class DLanding extends StatefulWidget {
-  const DLanding({Key? key}) : super(key: key);
+class Landing extends StatefulWidget {
+  const Landing({Key? key}) : super(key: key);
 
   @override
-  State<DLanding> createState() => _DLandingState();
+  State<Landing> createState() => _LandingState();
 }
 
-class _DLandingState extends State<DLanding> {
+class _LandingState extends State<Landing> {
   @override
   void initState() {
     super.initState();

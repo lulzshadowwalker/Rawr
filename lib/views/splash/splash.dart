@@ -1,13 +1,13 @@
 part of '../../helpers/lulz_imports.dart';
 
-class DSplash extends StatefulWidget {
-  const DSplash({Key? key}) : super(key: key);
+class Splash extends StatefulWidget {
+  const Splash({Key? key}) : super(key: key);
 
   @override
-  State<DSplash> createState() => _DSplashState();
+  State<Splash> createState() => _SplashState();
 }
 
-class _DSplashState extends State<DSplash> {
+class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
@@ -22,8 +22,8 @@ class _DSplashState extends State<DSplash> {
 
         /// Check [isFirstLaunch] and show either Login(Login/Home technically) or landing page
         isFirstLaunch == null
-            ? Get.off(() => const DLanding())
-            : Get.off(() => const DSignIn(), binding: ClientBinding());
+            ? Get.off(() => const Landing())
+            : Get.off(() => const SignIn(), binding: ClientBinding());
       },
     );
   }

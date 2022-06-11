@@ -5,9 +5,7 @@ import 'package:get/get.dart';
 import 'package:rawr/controllers/client/client_controller.dart';
 import 'package:rawr/helpers/lulz_imports.dart';
 import 'package:rawr/local/lulz_local.dart';
-import 'package:rawr/services/database/remote_database/models/remote_user.dart';
-
-/// TODO factory constructor
+import 'package:rawr/models/remote_user.dart';
 
 class RemoteDatabaseController extends GetxController {
   static final Client _client = Get.find<ClientController>().getClient;
@@ -33,7 +31,7 @@ class RemoteDatabaseController extends GetxController {
       dev.log('user added to remote database', name: _className);
     } catch (e) {
       dev.log(
-        'error adding user to remote database',
+        'error adding user to remote database', 
         error: e,
         name: _className,
       );

@@ -1,7 +1,7 @@
 part of '../../helpers/lulz_imports.dart';
 
-class DHome extends StatelessWidget {
-  const DHome({Key? key}) : super(key: key);
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

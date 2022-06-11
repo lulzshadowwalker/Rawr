@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rawr/helpers/lulz_imports.dart';
-import 'package:rawr/services/auth/auth_controller.dart';
-import 'package:rawr/services/database/remote_database/remote_database_controller.dart';
+import 'package:rawr/controllers/auth/auth_controller.dart';
 
-class DSignIn extends StatefulWidget {
-  const DSignIn({Key? key}) : super(key: key);
+class SignIn extends StatefulWidget {
+  const SignIn({Key? key}) : super(key: key);
 
   @override
-  State<DSignIn> createState() => _DSignInState();
+  State<SignIn> createState() => _SignInState();
 }
 
-class _DSignInState extends State<DSignIn> {
+class _SignInState extends State<SignIn> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final AuthController _auth = Get.find<AuthController>();
@@ -74,6 +73,6 @@ class _DSignInState extends State<DSignIn> {
   Future<void> showSuitableScreen() async {
     bool authStatus = await _auth.checkAuthStatus;
 
-    authStatus ? _auth.getOffAll(const DHome()) : null;
+    authStatus ? _auth.getOffAll(const Home()) : null;
   }
 }

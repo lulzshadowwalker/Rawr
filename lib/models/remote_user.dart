@@ -13,7 +13,7 @@ class RemoteUser {
 
   RemoteUser.fromLulzUser(LulzUser lulzUser)
 
-      /// Special model because [appwrite] would not a document if the data
+      /// Special model because [appwrite] would not add document if the data
       ///  structure is not compatible
       : email = lulzUser.email,
         username = lulzUser.username,

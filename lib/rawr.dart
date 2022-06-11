@@ -7,7 +7,7 @@ class Rawr extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Rawr',
-      home: const DSplash(),
+      home:  const LulzViewport(),
       debugShowCheckedModeBanner: false,
       theme: LulzTheme.light,
       darkTheme: LulzTheme.dark,

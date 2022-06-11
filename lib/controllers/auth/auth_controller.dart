@@ -6,9 +6,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:rawr/controllers/client/client_controller.dart';
 import 'package:rawr/helpers/lulz_imports.dart';
-import 'package:rawr/services/database/remote_database/models/remote_user.dart';
-import 'package:rawr/services/database/remote_database/remote_database_controller.dart';
-import 'package:rawr/views/auth/sign_in/d_sign_in.dart';
+import 'package:rawr/models/remote_user.dart';
+import 'package:rawr/controllers/database/remote/remote_database_controller.dart';
+import 'package:rawr/views/auth/sign_in/sign_in.dart';
 
 class AuthController extends GetxController {
   /// [appwrite]
@@ -18,7 +18,6 @@ class AuthController extends GetxController {
 
   /// string constants
   static const String _className = 'AuthController';
-  static const String _current = 'current';
 
   //
   // ─── CHECK AUTH STATUS ──────────────────────────────────────────────────────────
@@ -26,7 +25,7 @@ class AuthController extends GetxController {
   Future<bool> get checkAuthStatus async {
     try {
       /// I wish we had an auth status stream
-      await _account.getSession(sessionId: _current);
+      await _account.getSession(sessionId: LulzConst.current);
       return true;
     } catch (e) {
       /// no need for a toast message
@@ -48,7 +47,7 @@ class AuthController extends GetxController {
 
   /// It is recommended you use the member functions [getTo], [getOffAll],
   ///  or [getOff] when navigating to other screens to make sure you reset
-  ///  user data both in [AuthController] and [RemoteDatabaseController].
+  ///  user data both in [AuthController].
   void resetUserdata() => _userData = LulzUser();
   //
   // ───────────────────────────────────────────────────────── STATE MANAGEMENT ─────
@@ -87,7 +86,7 @@ class AuthController extends GetxController {
 
       await _remote.registerNewUser(RemoteUser.fromLulzUser(_userData));
 
-      getOffAll(const DHome());
+      getOffAll(const Home());
     } catch (e) {
       LulzUtils.handleError(
         toastMessage: 'error signing up',
@@ -114,7 +113,7 @@ class AuthController extends GetxController {
         name: _className,
       );
 
-      getOffAll(const DHome());
+      getOffAll(const Home());
     } catch (e) {
       LulzUtils.handleError(
           toastMessage: 'error signing in', error: e, className: _className);
@@ -132,7 +131,7 @@ class AuthController extends GetxController {
       _account.createAnonymousSession();
       dev.log('created an session anonymously', name: _className);
 
-      getOffAll(const DHome());
+      getOffAll(const Home());
     } catch (e) {
       LulzUtils.handleError(
         toastMessage: 'error signing in',
@@ -153,7 +152,7 @@ class AuthController extends GetxController {
       await _account.deleteSessions();
       dev.log('signed out', name: _className);
 
-      getOffAll(const DSignIn());
+      getOffAll(const SignIn());
     } catch (e) {
       LulzUtils.handleError(
           toastMessage: 'error signing out', error: e, className: _className);
